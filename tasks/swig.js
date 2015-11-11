@@ -22,8 +22,8 @@ module.exports = function(grunt) {
     }
     
     try {
-      var hyprHelpers = require(process.cwd() + '/hypr-helpers.js');
-      console.log(addHyprHelpers);
+      var addHyperHelpers = require(process.cwd() + '/hypr-helpers.js');
+      console.log(addHyperHelpers);
     } catch(err) {
       console.log("You should define the hypr override methods in hypr-helpers.js");
     }
