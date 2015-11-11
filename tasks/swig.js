@@ -20,6 +20,11 @@ module.exports = function(grunt) {
     if (config.data.init !== undefined) {
       swig.setDefaults(config.data.init);
     }
+    
+    try {
+      var hyprHelpers = require(process.cwd() + '/hypr-helpers.js');
+      addHyprHelpers(swig);
+    }
 
     try {
       globalVars = grunt.util._.extend(config.data, grunt.file.readJSON(process.cwd() + '/global.json'));
